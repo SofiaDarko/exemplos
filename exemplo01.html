@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <title>Document</title>
-    
+
     <style>
-        *{
-            margin:0
+        * {
+            margin: 0
         }
+
         body {
             background: lightcoral;
         }
 
-        .exemplo1 {
+        .lista-banners {
             width: 1000px;
             margin: 0 auto;
         }
@@ -26,11 +29,12 @@
         .exemplo2 img {
             object-fit: cover;
             width: 100vw;
-            max-width:100%;  /* added */
+            max-width: 100%;
+            /* added */
             height: 400px;
         }
 
-        .exemplo3{
+        .lista-banners2 {
             width: 500px;
             margin: 0 auto;
         }
@@ -40,7 +44,43 @@
 
 <body>
     <!-- https://kenwheeler.github.io/slick/ -->
+    <div class="lista-banners">
+        <img src="img/capitao-america-grande.jpg">
+        <img src="img/homem-de-ferro-grande.jpg">
+        <img src="img/wolverine-grande.jpg">
 
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script>
+        $('.lista-banners').slick({
+            arrows:false, 
+            autoplay:true
+        });
+    </script>
+
+    <div class="lista-banners2">
+        <img src="img/capitao-america.jpg">
+        <img src="img/homem-de-ferro.jpg">
+        <img src="img/wolverine.jpg"
+        <img src="img/capitao-america.jpg">
+        <img src="img/homem-de-ferro.jpg">
+        <img src="img/wolverine.jpg">
+
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script>
+        $('.lista-banners2').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 2
+        });
+    </script>
 </body>
 
 </html>
